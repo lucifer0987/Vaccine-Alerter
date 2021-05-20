@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         add_fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO add state selection code ahead
+                
             }
         });
 
