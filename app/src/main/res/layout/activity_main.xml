@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3E486F"
+    tools:context=".Activities.MainActivity">
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto"
+        android:text="Welcome"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Start Your Vaccine Hunt Now"
+        android:layout_below="@id/txt1"
+        android:layout_marginStart="24dp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"/>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/one_side_round_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/bg_im"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/live_centers_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LIVE CENTERS"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="@color/purple_200"
+        android:layout_alignTop="@id/bg_im"
+        android:layout_alignEnd="@id/bg_im"
+        android:textStyle="bold"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/purple_700"
+        android:backgroundTint="#FFFFFF"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/settings_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SETTINGS"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="@color/purple_200"
+        android:layout_below="@id/live_centers_btn"
+        android:layout_alignStart="@id/live_centers_btn"
+        android:layout_alignEnd="@id/live_centers_btn"
+        android:textColor="@color/purple_700"
+        android:backgroundTint="#FFFFFF"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_fab"
+        android:backgroundTint="@color/dark_blackish"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp"
+        app:fabSize="auto"
+        android:src="@drawable/ic_baseline_add_24"
+        app:fabCustomSize="70dp"
+        app:maxImageSize="45dp"
+        app:tint="@color/white"
+        android:contentDescription="adds a new alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
