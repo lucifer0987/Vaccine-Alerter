@@ -107,17 +107,12 @@ public class MyWorker extends Worker {
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             NotificationChannel channel = new NotificationChannel("coding", "coding", NotificationManager.IMPORTANCE_HIGH);
-            channel.setVibrationPattern(new long[]{0, 500, 1000});
-
-            if (manager != null) {
-                manager.createNotificationChannel(channel);
-            }
+            manager.createNotificationChannel(channel);
         }
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "coding")
                 .setContentTitle(task)
                 .setContentText(desc)
-                .setVibrate(new long[]{0, 500, 1000})
                 .setSmallIcon(R.mipmap.ic_launcher);
 
         Random r = new Random();

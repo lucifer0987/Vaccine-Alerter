@@ -57,12 +57,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
             finish();
         } else {
-            if (!Paper.book().read("autostart", false)) {
-                Toast.makeText(MainActivity.this, "Please Enable Auto-Start for checking vaccine slots in the background./n Select Vaccine Alerter app.", Toast.LENGTH_LONG).show();
-                Paper.book().write("autostart", true);
-                autoStartPermission();
-            }
-
             List<notificationURL> noti = Paper.book().read("noti", new ArrayList<>());
             for (int i = 0; i < noti.size(); i++) {
                 notificationURL curr = noti.get(i);
@@ -83,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                         .build();
 
                 PeriodicWorkRequest request = new PeriodicWorkRequest.Builder(MyWorker.class, 15, TimeUnit.MINUTES)
-                        .setConstraints(constraints)
+                        //.setConstraints(constraints)
                         .addTag("work")
                         .build();
 
@@ -95,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                         .build();
 
                 PeriodicWorkRequest request = new PeriodicWorkRequest.Builder(MyWorker.class, 15, TimeUnit.MINUTES)
-                        .setConstraints(constraints)
+                        //.setConstraints(constraints)
                         .addTag("work")
                         .build();
 
@@ -131,30 +125,6 @@ public class MainActivity extends AppCompatActivity {
         settings = findViewById(R.id.alerts_btn);
         add_fab = findViewById(R.id.add_fab);
         rec_view = findViewById(R.id.rec_view);
-    }
-
-    private void autoStartPermission() {
-        if (Build.BRAND.equalsIgnoreCase("xiaomi")) {
-            Intent intent = new Intent();
-            intent.setComponent(new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity"));
-            startActivity(intent);
-        } else if (Build.BRAND.equalsIgnoreCase("Letv")) {
-            Intent intent = new Intent();
-            intent.setComponent(new ComponentName("com.letv.android.letvsafe", "com.letv.android.letvsafe.AutobootManageActivity"));
-            startActivity(intent);
-        } else if (Build.BRAND.equalsIgnoreCase("Honor")) {
-            Intent intent = new Intent();
-            intent.setComponent(new ComponentName("com.huawei.systemmanager", "com.huawei.systemmanager.optimize.process.ProtectActivity"));
-            startActivity(intent);
-        } else if (Build.BRAND.equalsIgnoreCase("oppo")) {
-            Intent intent = new Intent();
-            intent.setComponent(new ComponentName("com.coloros.safecenter", "com.coloros.safecenter.permission.startup.StartupAppListActivity"));
-            startActivity(intent);
-        } else if (Build.BRAND.equalsIgnoreCase("vivo")) {
-            Intent intent = new Intent();
-            intent.setComponent(new ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity"));
-            startActivity(intent);
-        }
     }
 
 }
