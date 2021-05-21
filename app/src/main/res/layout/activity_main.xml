@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3E486F"
+    android:background="@color/dark_blackish"
     tools:context=".Activities.MainActivity">
 
     <TextView
@@ -66,10 +66,10 @@
         android:backgroundTint="#FFFFFF"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/settings_btn"
+        android:id="@+id/alerts_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SETTINGS"
+        android:text="ALERTS"
         android:textStyle="bold"
         android:fontFamily="@font/roboto"
         android:paddingStart="8dp"
@@ -83,6 +83,29 @@
         android:layout_alignEnd="@id/live_centers_btn"
         android:textColor="@color/purple_700"
         android:backgroundTint="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Your Alerts"
+        android:layout_below="@id/bg_im"
+        android:layout_marginStart="24dp"
+        android:textColor="@color/dark_blackish"
+        android:textSize="26sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/txt3"
+        android:id="@+id/rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:paddingTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:paddingBottom="8dp"
+        android:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_fab"

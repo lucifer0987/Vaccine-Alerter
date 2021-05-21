@@ -2,9 +2,12 @@ package com.example.vaccinealerter.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 import com.example.vaccinealerter.R;
 
@@ -29,4 +32,5 @@ public class SplashScreen extends AppCompatActivity {
             }
         }, 3000);
     }
+
 }

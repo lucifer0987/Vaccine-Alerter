@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="8dp"
+    android:paddingStart="8dp">
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Andhra Pradesh"
+        android:layout_marginStart="12dp"
+        android:textColor="#000000"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:id="@+id/district"
+        android:layout_below="@id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Kochi"
+        android:layout_marginStart="12dp"
+        android:textColor="#575757"
+        android:textSize="20sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_below="@id/district"
+        android:background="#000000"/>
+
+    <ImageView
+        android:id="@+id/delete_alert"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_delete_24"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/age_18"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/delete_alert"
+        android:layout_marginEnd="60dp"
+        android:visibility="gone"
+        android:src="@color/purple_500"/>
+
+    <TextView
+        android:id="@+id/txt1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/delete_alert"
+        android:layout_marginEnd="70dp"
+        android:textStyle="bold"
+        android:text="18"
+        android:visibility="gone"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/age_45"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_toStartOf="@id/delete_alert"
+        android:layout_marginEnd="8dp"
+        android:src="#11C52F"/>
+
+    <TextView
+        android:id="@+id/txt2"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/delete_alert"
+        android:layout_marginEnd="18dp"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:text="45"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
