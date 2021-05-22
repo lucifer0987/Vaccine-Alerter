@@ -35,7 +35,7 @@ import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button live_centers, settings;
+    Button live_centers, alerts;
     FloatingActionButton add_fab;
     RecyclerView rec_view;
     MainAdapter mainAdapter;
@@ -44,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //TODO add alerts storage
+        
         //TODO add information section
         //TODO add samsung autostart
 
@@ -115,6 +114,21 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+            alerts.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, AlertsActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            live_centers.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(MainActivity.this, "Will be available in future updates!", Toast.LENGTH_SHORT).show();
+                }
+            });
+
         }
 
     }
@@ -122,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
     private void Init() {
         Paper.init(this);
         live_centers = findViewById(R.id.live_centers_btn);
-        settings = findViewById(R.id.alerts_btn);
+        alerts = findViewById(R.id.alerts_btn);
         add_fab = findViewById(R.id.add_fab);
         rec_view = findViewById(R.id.rec_view);
     }

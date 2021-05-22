@@ -68,6 +68,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
                                 data.remove(curr);
                                 Paper.init(context);
                                 Paper.book().write("noti", data);
+                                Paper.book().write("alerts", "");
                                 notifyDataSetChanged();
                                 dialogInterface.dismiss();
                             }
