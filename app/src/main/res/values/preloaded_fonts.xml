@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/bilbo_swash_caps</item>
+        <item>@font/kristi</item>
+        <item>@font/mr_dafoe</item>
         <item>@font/roboto</item>
+        <item>@font/roboto_light</item>
     </array>
 </resources>

@@ -5,13 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".Activities.SplashScreen">
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/icon"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Splash Screen!"
+        android:fontFamily="@font/roboto"
+        android:text="Vaccine Alerter"
+        android:layout_marginTop="16dp"
         android:textColor="#000000"
-        android:textSize="24sp"/>
+        android:textSize="40sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/bilbo_swash_caps"
+        android:text="@string/safe_timely_vaccination"
+        android:textColor="#000000"
+        android:textSize="26sp" />
 
 </LinearLayout>

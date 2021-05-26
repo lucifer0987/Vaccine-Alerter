@@ -24,8 +24,6 @@ public class SplashScreen extends AppCompatActivity {
         Paper.init(this);
         Toast.makeText(SplashScreen.this, "Please Enable Auto-Start for checking vaccine slots in the background./n Select Vaccine Alerter app.", Toast.LENGTH_LONG).show();
         autoStartPermission();
-
-        //TODO Open app info page and enable all notification settings and enable autostart and other permissions and disable battery saver
     }
 
     @Override
@@ -36,7 +34,7 @@ public class SplashScreen extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent i = new Intent(SplashScreen.this, MainActivity.class);
+                    Intent i = new Intent(SplashScreen.this, WalkthroughActivity.class);
                     Paper.book().write("first", false);
                     startActivity(i);
                     finish();

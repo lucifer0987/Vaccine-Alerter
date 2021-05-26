@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blackish"
+    tools:context=".Activities.InfoActivity">
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Welcome!!!"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Follow these instructions to have a great experience with the application."
+        android:layout_below="@id/txt1"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"/>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/one_side_round_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Click this button to open App Info Page and follow the steps given below:"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="200dp"
+        android:textColor="#000000"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/app_info_btn"
+        android:layout_below="@id/txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App Info Page"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="@color/purple_200"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@color/purple_700"
+        android:backgroundTint="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/txt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="1. Enable Autostart.\n2. Disable any type of Battery Saver.\n3. Give all Permissions for Notifications."
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/app_info_btn"
+        android:textColor="#000000"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Click this button to open App Walkthrough: "
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_below="@id/txt4"
+        android:textColor="#000000"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/app_walk_btn"
+        android:layout_below="@id/txt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App Walkthrough Page"
+        android:textAllCaps="false"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="@color/purple_200"
+        android:textStyle="bold"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@color/purple_700"
+        android:backgroundTint="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/txt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Got an issue ?"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_below="@id/app_walk_btn"
+        android:textColor="#000000"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/contact_us"
+        android:layout_below="@id/txt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact US"
+        android:textAllCaps="false"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="@color/purple_200"
+        android:textStyle="bold"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@color/purple_700"
+        android:backgroundTint="#FFFFFF"/>
+
+
+</RelativeLayout>

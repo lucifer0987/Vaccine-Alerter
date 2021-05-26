@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/roboto_light"
             android:text="Select Your State Or Union Territory"
             android:textColor="#FFFFFF"
             android:textSize="32sp" />

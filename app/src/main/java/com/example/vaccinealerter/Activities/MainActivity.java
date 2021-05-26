@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.vaccinealerter.Adapters.MainAdapter;
@@ -39,14 +40,12 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton add_fab;
     RecyclerView rec_view;
     MainAdapter mainAdapter;
+    ImageView info;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        //TODO add information section
-        //TODO add samsung autostart
 
         Init();
 
@@ -129,6 +128,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+            info.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, InfoActivity.class);
+                    startActivity(intent);
+                }
+            });
+
         }
 
     }
@@ -139,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
         alerts = findViewById(R.id.alerts_btn);
         add_fab = findViewById(R.id.add_fab);
         rec_view = findViewById(R.id.rec_view);
+        info = findViewById(R.id.info);
     }
 
 }

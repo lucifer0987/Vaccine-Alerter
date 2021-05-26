@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Vaccine Alerter</string>
+    <string name="safe_timely_vaccination"><![CDATA[Safe & Timely Vaccination]]></string>
 </resources>
