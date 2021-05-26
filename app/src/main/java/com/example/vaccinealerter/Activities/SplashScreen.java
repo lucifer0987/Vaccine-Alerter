@@ -64,6 +64,17 @@ public class SplashScreen extends AppCompatActivity {
             Intent intent = new Intent();
             intent.setComponent(new ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity"));
             startActivityForResult(intent, 123);
+        }else{
+            Paper.book().write("autostart", true);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent i = new Intent(SplashScreen.this, WalkthroughActivity.class);
+                    Paper.book().write("first", false);
+                    startActivity(i);
+                    finish();
+                }
+            }, 3000);
         }
     }
 

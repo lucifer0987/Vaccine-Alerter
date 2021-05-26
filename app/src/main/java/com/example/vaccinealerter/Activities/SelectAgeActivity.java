@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -49,8 +50,13 @@ public class SelectAgeActivity extends AppCompatActivity {
                         curr.setState(state);
                         curr.setDistrict(district);
                         curr.setURL(url+districtId);
-                        noti.add(curr);
-                        Paper.book().write("noti", noti);
+                        if(compare(noti, curr)){
+                            noti.add(curr);
+                            //printnoti(noti);
+                            Paper.book().write("noti", noti);
+                        }else{
+                            Toast.makeText(SelectAgeActivity.this, "This district and age groups are already added.", Toast.LENGTH_SHORT).show();
+                        }
                     }else {
                         List<notificationURL> noti = Paper.book().read("noti", new ArrayList<>());
                         notificationURL curr = new notificationURL();
@@ -58,8 +64,13 @@ public class SelectAgeActivity extends AppCompatActivity {
                         curr.setState(state);
                         curr.setDistrict(district);
                         curr.setURL(url+districtId);
-                        noti.add(curr);
-                        Paper.book().write("noti", noti);
+                        if(compare(noti, curr)){
+                            noti.add(curr);
+                            //printnoti(noti);
+                            Paper.book().write("noti", noti);
+                        }else{
+                            Toast.makeText(SelectAgeActivity.this, "This district and age groups are already added.", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }else if(group_45.isChecked()){
                     List<notificationURL> noti = Paper.book().read("noti", new ArrayList<>());
@@ -68,8 +79,13 @@ public class SelectAgeActivity extends AppCompatActivity {
                     curr.setState(state);
                     curr.setDistrict(district);
                     curr.setURL(url+districtId);
-                    noti.add(curr);
-                    Paper.book().write("noti", noti);
+                    if(compare(noti, curr)){
+                        noti.add(curr);
+                        //printnoti(noti);
+                        Paper.book().write("noti", noti);
+                    }else{
+                        Toast.makeText(SelectAgeActivity.this, "This district and age groups are already added.", Toast.LENGTH_SHORT).show();
+                    }
                 }else{
                     Toast.makeText(SelectAgeActivity.this, "Please Select an age group!", Toast.LENGTH_SHORT).show();
                 }
@@ -81,6 +97,21 @@ public class SelectAgeActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private boolean compare(List<notificationURL> noti, notificationURL curr){
+        for (int i = 0; i < noti.size(); i++){
+            if(noti.get(i).getURL().equals(curr.getURL())){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void printnoti(List<notificationURL> noti){
+        for(int i = 0; i < noti.size(); i++){
+            Log.e("this", String.valueOf(noti.get(i).getURL()));
+        }
     }
 
     private void Init() {

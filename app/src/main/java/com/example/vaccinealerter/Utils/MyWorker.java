@@ -3,8 +3,10 @@ package com.example.vaccinealerter.Utils;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
@@ -96,7 +98,7 @@ public class MyWorker extends Worker {
 
                         if(res == 1) {
                             Log.e("this34", "yes");
-                            displayNotification("Vaccine Available!", noti.get(finalI).getState() + ", " + noti.get(finalI).getDistrict() + "\n" + "Go to Cowin website and book a slot\nCheck Alert section in the app for more information.");
+                            displayNotification("Vaccine Available!", noti.get(finalI).getState() + ", " + noti.get(finalI).getDistrict() + "\n" + "Click here to go to Cowin website and book a slot\nCheck Alert section in the app for more information.");
                         }
                     }else{
                         Log.e("Work Manager", "Some Failure Occurred!");
@@ -123,15 +125,21 @@ public class MyWorker extends Worker {
             manager.createNotificationChannel(channel);
         }
 
+        Intent notificationIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.cowin.gov.in/home"));
+        PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "coding")
                 .setContentTitle(task)
                 .setContentText(desc)
+                .setAutoCancel(true)
                 .setPriority(Notification.PRIORITY_HIGH)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-                .setSmallIcon(R.mipmap.ic_launcher);
+                .setContentIntent(contentIntent)
+                .setSmallIcon(R.drawable.icon);
+
+        Notification notification = builder.build();
 
         Random r = new Random();
-        manager.notify(r.nextInt(), builder.build());
+        manager.notify(r.nextInt(), notification);
         playNotificationSound();
 
     }
