@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.vaccinealerter">
+    package="my.app.vaccinealerter">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,21 +11,21 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.VaccineAlerter">
-        <activity android:name=".Activities.WalkthroughActivity"> </activity>
-        <activity android:name=".Activities.InfoActivity" />
-        <activity android:name=".Activities.AlertsActivity" />
-        <activity android:name=".Activities.SelectAgeActivity" />
-        <activity android:name=".Activities.ResultsActivity" />
-        <activity android:name=".Activities.SelectDistrictActivity" />
-        <activity android:name=".Activities.SelectStateActivity" />
-        <activity android:name=".Activities.MainActivity">
+        <activity android:name="my.app.vaccinealerter.Activities.WalkthroughActivity"> </activity>
+        <activity android:name="my.app.vaccinealerter.Activities.InfoActivity" />
+        <activity android:name="my.app.vaccinealerter.Activities.AlertsActivity" />
+        <activity android:name="my.app.vaccinealerter.Activities.SelectAgeActivity" />
+        <activity android:name="my.app.vaccinealerter.Activities.ResultsActivity" />
+        <activity android:name="my.app.vaccinealerter.Activities.SelectDistrictActivity" />
+        <activity android:name="my.app.vaccinealerter.Activities.SelectStateActivity" />
+        <activity android:name="my.app.vaccinealerter.Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.SplashScreen" />
+        <activity android:name="my.app.vaccinealerter.Activities.SplashScreen" />
 
         <meta-data
             android:name="preloaded_fonts"

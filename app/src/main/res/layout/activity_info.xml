@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_blackish"
-    tools:context=".Activities.InfoActivity">
+    tools:context="my.app.vaccinealerter.Activities.InfoActivity">
 
     <TextView
         android:id="@+id/txt1"

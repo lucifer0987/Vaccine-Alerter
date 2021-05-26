@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/cord"
     android:background="@color/dark_blackish"
-    tools:context=".Activities.SelectStateActivity">
+    tools:context="my.app.vaccinealerter.Activities.SelectStateActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
